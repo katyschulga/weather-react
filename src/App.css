@@ -1,38 +1,51 @@
+:root {
+    --accent-color: #ffb703;
+    --primary-color: #023047;
+    --secondary-color: #219ebc;
+}
+
 .App {
-  text-align: center;
+    margin: 30px auto;
+    border: 1px solid #f2f2f2;
+    border-radius: 10px;
+    max-width: 600px;
+    color: var(--primary-color);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App .search-btn {
+    background-color: var(--accent-color);
+    border-radius: 6px;
+    color: var(--primary-color);
+    font-weight: 600;
+    padding: 6px 12px;
+    border: 1px solid var(--accent-color);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App ul {
+    list-style: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.clearfix {
+    display: flex;
+    align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.App img {
+    height: 64px;
+    line-height: 64px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App .temperature {
+    font-size: 64px;
+    line-height: 64px;
+    font-weight: 400;
+    margin-left: 10px;
+}
+
+.App .unit {
+    font-size: 16px;
+    position: relative;
+    top: -34px;
+    line-height: 1;
+    margin-left: 4px;
 }
