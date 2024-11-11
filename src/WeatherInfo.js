@@ -5,7 +5,7 @@ export default function WeatherInfo(props) {
     return (
         <div className="WeatherInfo">
             <div className="row">
-                <h2 className="mt-3">Glasgow</h2>
+                <h2 className="mt-3">{props.data.city}</h2>
                 <ul>
                     <li>
                         <FormattedDate date={props.data.date} />
