@@ -30,7 +30,7 @@
     align-items: center;
 }
 
-.App img {
+.App canvas {
     height: 64px;
     line-height: 64px;
 }
