@@ -50,6 +50,10 @@
     margin-left: 4px;
 }
 
+.unit a {
+    color: var(--accent-color);
+}
+
 footer {
     margin-top: 200px;
 }
