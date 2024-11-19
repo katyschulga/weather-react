@@ -19,14 +19,20 @@ export default function WeatherForecast(props) {
         return (
             <div className="WeatherForecast">
                 <div className="row">
-                    <div className="col">
-                        <WeatherForecastDay data={forecast[0]} />
-                    </div>
+                    {forecast.map(function (dailyForecast, index) {
+                        if (index < 5) {
+                            return (
+                                <div className="col" key={index}>
+                                    <WeatherForecastDay data={dailyForecast} />
+                                </div>
+                            );
+                        }
+                    })}
                 </div>
             </div>
         );
     } else {
-        let apiKey = "5tf352bo163f33b3840bd4ca51872c55";
+        let apiKey = "fbef01f4et1b02o0d25c27210a43ef3f";
         let latitude = props.coordinates.latitude;
         let longitude = props.coordinates.longitude;
         let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lat=${latitude}&lon=${longitude}&key=${apiKey}&units=metric`;

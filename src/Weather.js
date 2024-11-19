@@ -19,12 +19,12 @@ export default function Weather(props) {
             wind: response.data.wind.speed,
             description: response.data.condition.description,
             city: response.data.city,
-            iconUrl: response.data.condition.icon_url,
+            icon: response.data.condition.icon,
         });
     }
 
     function search() {
-        const apiKey = "5tf352bo163f33b3840bd4ca51872c55";
+        const apiKey = "fbef01f4et1b02o0d25c27210a43ef3f";
         let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
         axios.get(apiUrl).then(handleResponse);
     }
